@@ -4,7 +4,9 @@ Example of routing between two pages.
 The files in this folder is an isolated demo which should be compiled and run in this folder.
 
 Compile: `tsc -project src/app/routing`
+
 Run: `live-server --open=src/app/routing/`
+
 Tests: `live-server --open=src/app/routing/unit-tests.html`
 
 ### Notes

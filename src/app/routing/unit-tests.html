@@ -34,28 +34,3 @@
 </body>
 
 </html>
-
-<!--
-
-System.config({
-    packages: { 'dist': { defaultExtension: 'js' } }
-});
-System.import('dist/boot')
-    .then(window.onload)
-    .catch(console.log.bind(console));
-
-
-System.config({
-    //transpiler: 'typescript',
-    packages: {
-        'dist': {
-            defaultExtension: 'js'
-        }
-    }
-});
-Promise.all([
-        System.import('dist/app.spec')
-    ])
-    .then(window.onload)
-    .catch(console.error.bind(console));
--->

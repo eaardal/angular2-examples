@@ -1,7 +1,6 @@
 import {RouteDefinition} from "angular2/router";
 import {ROUTES, ROUTE_NAMES} from "./routes";
-import {IndexComponent} from "../index.component";
-import {FoodComponent} from "../food/food.component";
+import {MyComponent} from "../declaration-syntax/component";
 
 describe("routes", () => {
 

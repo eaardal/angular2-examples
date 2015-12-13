@@ -1,7 +1,7 @@
 import {Observable, Injector} from "angular2/angular2";
 import {inject} from "angular2/testing";
 import {MyService} from "./service";
-import {Http} from "angular2/http";
+import {Http, ConnectionBackend} from "angular2/http";
 
 describe("service", () => {
 

@@ -1,7 +1,7 @@
 import {bootstrap, ComponentRef } from "angular2/angular2";
 import {HTTP_PROVIDERS} from "angular2/http";
 import {ROUTER_PROVIDERS} from "angular2/router";
-import {AppComponent} from "../app.component";
+import {AppComponent} from "../declaration-syntax/component";
 
 bootstrap(AppComponent, [
     HTTP_PROVIDERS,

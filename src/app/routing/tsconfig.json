@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "target": "ES5",
+        "module": "commonjs",
+        "outDir": "dist",
+        "sourceMap": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "removeComments": false,
+        "noImplicitAny": false
+    },
+    "files": [
+        "../../../node_modules/reflect-metadata/reflect-metadata.d.ts",
+        "../../typings/angular2/angular2.d.ts",
+        "page-one.component.ts",
+        "page-one.component.spec.ts",
+        "page-two.component.ts",
+        "page-two.component.spec.ts",
+        "app.component.ts",
+        "app.component.spec.ts",
+        "boot.ts",
+        "routes.ts",
+        "routes.spec.ts"
+    ]
+}

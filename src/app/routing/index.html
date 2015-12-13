@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base href="/src/app/routing/"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Angular2 Routing Demo</title>
+    <link rel="stylesheet" href="../../../bower_components/bootstrap4-dist/dist/css/bootstrap.min.css" />
+    <script src="../../../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../../../bower_components/bootstrap4-dist/dist/js/bootstrap.min.js"></script>
+    <script src="../../../node_modules/systemjs/dist/system.src.js"></script>
+    <script src="../../../node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script src="../../../node_modules/angular2/bundles/router.dev.js"></script>
+    <script src="../../../node_modules/angular2/bundles/http.dev.js"></script>
+    <script>
+        System.config({
+            packages: { 'dist': { defaultExtension: 'js' } }
+        });
+        System.import('dist/boot').catch(console.log.bind(console));
+    </script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <routing-demo-app>Loading...</routing-demo-app>
+    </div>
+</body>
+
+</html>

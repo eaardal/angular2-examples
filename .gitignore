@@ -30,5 +30,6 @@ bower_components
 src/app/**/*.js
 src/app/**/*.js.map
 src/dist
+src/app/routing/dist
 
 typings

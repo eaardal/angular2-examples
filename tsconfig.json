@@ -21,5 +21,10 @@
         "src/app/routing/page-one.component.spec.ts",
         "src/app/routing/page-two.component.ts",
         "src/app/routing/page-two.component.spec.ts"
+        "src/app/routing/app.component.ts",
+        "src/app/routing/app.component.spec.ts",
+        "src/app/routing/boot.ts",
+        "src/app/routing/routes.ts",
+        "src/app/routing/routes.spec.ts"
     ]
 }

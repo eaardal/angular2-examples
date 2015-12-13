@@ -1,17 +1,16 @@
 {
-  "name": "diet-maestro",
-  "description": "A diet and meal tracking web application",
+  "name": "angular2-examples",
+  "description": "A playground for implementing angular2 concepts",
   "main": "index.html",
   "authors": [
     "Eirik Årdal"
   ],
   "license": "ISC",
   "keywords": [
-    "diet",
-    "meal",
-    "planning"
+    "angular2",
+    "testing"
   ],
-  "homepage": "https://github.com/eaardal/diet-maestro",
+  "homepage": "https://github.com/eaardal/angular2-examples",
   "moduleType": [],
   "private": true,
   "ignore": [

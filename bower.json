@@ -1,0 +1,27 @@
+{
+  "name": "diet-maestro",
+  "description": "A diet and meal tracking web application",
+  "main": "index.html",
+  "authors": [
+    "Eirik Årdal"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "diet",
+    "meal",
+    "planning"
+  ],
+  "homepage": "https://github.com/eaardal/diet-maestro",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap4-dist": "*"
+  }
+}

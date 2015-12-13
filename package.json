@@ -1,0 +1,40 @@
+{
+  "name": "diet-maestro",
+  "version": "1.0.0",
+  "repository": "https://github.com/eaardal/diet-maestro",
+  "description": "A diet and meal tracking web application",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc -p src -w",
+    "start": "live-server --open=src",
+    "test": "live-server --open=src/unit-tests.html"
+  },
+  "keywords": [
+    "diet",
+    "meal planning"
+  ],
+  "author": "Eirik Årdal",
+  "license": "ISC",
+  "dependencies": {
+    "angular2": "2.0.0-alpha.44",
+    "systemjs": "0.19.2"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-concurrent": "^2.1.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-exec": "^0.4.6",
+    "grunt-karma": "^0.12.1",
+    "grunt-tslint": "^3.0.0",
+    "grunt-typescript": "^0.8.0",
+    "jasmine-core": "2.4.1",
+    "karma": "^0.13.15",
+    "karma-coverage": "^0.5.3",
+    "karma-jasmine": "^0.3.6",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "live-server": "^0.8.2",
+    "phantomjs": "^1.9.19",
+    "reflect-metadata": "^0.1.2",
+    "typescript": "^1.7.3"
+  }
+}

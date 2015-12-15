@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>SystemJS and Module Tests</title>
+        <link rel="stylesheet" href="../../../node_modules/jasmine-core/lib/jasmine-core/jasmine.css">
+        <script src="../../../node_modules/jasmine-core/lib/jasmine-core/jasmine.js"></script>
+        <script src="../../../node_modules/jasmine-core/lib/jasmine-core/jasmine-html.js"></script>
+        <script src="../../../node_modules/jasmine-core/lib/jasmine-core/boot.js"></script>
+    </head>
+    <body>
+       <script src="../../../node_modules/systemjs/dist/system.src.js"></script>
+        <script>
+            System.config({
+            packages: { 
+                'compiled': { defaultExtension: 'js' }
+            }
+            });
+            Promise.all([
+                //System.import('compiled/foo'),                
+                //System.import('compiled/bar'),
+                System.import('compiled/foobar')
+            ])
+            .then(window.onload)            
+            .then(function(){
+                console.log("System", System);
+                console.log("_loader", System._loader.modules);
+                console.log("defined", System.defined);
+            })
+            .then(function(){
+
+            })
+            .catch(console.error.bind(console));
+        </script>
+    </body>
+</html>
+<!--
+    <script src="../../../node_modules/systemjs/dist/system.src.js"></script>
+        <script src="../../../node_modules/angular2/bundles/angular2.dev.js"></script>
+        
+<script src="../../../node_modules/angular2/bundles/testing.js"></script>
+        <script src="../../../node_modules/angular2/bundles/router.dev.js"></script>
+        <script src="../../../node_modules/angular2/bundles/http.dev.js"></script>
+        <script src="../../../node_modules/reflect-metadata/Reflect.js"></script>
+
+paths: {
+'angular2/testing': '../../../node_modules/angular2/bundles/testing.js'
+}
+-->

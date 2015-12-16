@@ -9,29 +9,30 @@
 </head>
 
 <body>
-    <script src="../../../node_modules/systemjs/dist/system-polyfills.src.js"></script>
-    <script src="../../../node_modules/systemjs/dist/system.src.js"></script>
-    <script src="../../../node_modules/angular2/bundles/angular2.dev.js"></script>
-    <script src="../../../node_modules/angular2/bundles/testing.js"></script>
-    <script src="../../../node_modules/angular2/bundles/router.dev.js"></script>
-    <script src="../../../node_modules/angular2/bundles/http.dev.js"></script>
-    <script src="../../../node_modules/reflect-metadata/Reflect.js"></script>    
+    <script type="application/javascript" src="../../../node_modules/systemjs/dist/system-polyfills.src.js"></script>
+    <script type="application/javascript" src="../../../node_modules/systemjs/dist/system.src.js"></script>
+    <script type="application/javascript" src="../../../node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script type="application/javascript" src="../../../node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script type="application/javascript" src="../../../node_modules/angular2/bundles/testing.dev.js"></script>
+    <script type="application/javascript" src="../../../node_modules/angular2/bundles/router.dev.js"></script>
+    <script type="application/javascript" src="../../../node_modules/angular2/bundles/http.dev.js"></script>
+    <script type="application/javascript" src="../../../node_modules/rxjs/bundles/Rx.js"></script>        
     <script>
     System.config({
         transpiler: 'typescript',
         packages: { 
-            'dist': { defaultExtension: 'js' }
-        },
-        paths: {
-            'angular2/testing': '../../../node_modules/angular2/bundles/testing.js'
-        }
+            'dist': { defaultExtension: 'js' },            
+        }  
     });
-    Promise.all([
-            System.import('dist/angular-observables.spec'),
+    Promise.all([            
             System.import('dist/rxjs-observables.spec'),
-            System.import('dist/http-context')
-        ])
+            
+        ])        
         .then(window.onload)
+        .then(function(){
+            console.log(System._loader.modules);
+            console.log(System);
+        })
         .catch(console.error.bind(console));
     </script>
 </body>
@@ -39,5 +40,23 @@
 </html>
 
 <!--
+
+      paths: {
+            'angular2/angular2': '../../../node_modules/angular2/bundles/angular2.dev.js',
+            'angular2/testing': '../../../node_modules/angular2/bundles/testing.js',            
+        }
+
+'r': {
+                defaultExtension: 'js',
+                map: {
+                    'rxjs': '../../../../node_modules/rxjs'
+                },
+            }
+
+
+<script src="../../../node_modules/rxjs/bundles/Rx.js"></script>
+
+'rxjs': '../../../node_modules/rxjs/bundles/Rx.js'
+System.import('dist/angular-observables.spec'),
 <script src="../../../node_modules/rxjs/Rx.js"></script>
 -->

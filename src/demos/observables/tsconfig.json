@@ -10,10 +10,6 @@
         "noImplicitAny": false
     },
     "files": [
-        "../../../node_modules/reflect-metadata/reflect-metadata.d.ts",
-        "../../typings/angular2/angular2.d.ts",
-        "http-context.ts",
-        "angular-observables.spec.ts",
         "rxjs-observables.spec.ts"        
     ]
 }

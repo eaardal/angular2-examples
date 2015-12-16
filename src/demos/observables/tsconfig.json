@@ -10,6 +10,6 @@
         "noImplicitAny": false
     },
     "files": [
-        "rxjs-observables.spec.ts"        
+        "observables.spec.ts"        
     ]
 }

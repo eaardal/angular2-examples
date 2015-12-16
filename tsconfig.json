@@ -2,7 +2,7 @@
     "compilerOptions": {
         "target": "ES5",
         "module": "commonjs",
-        "outDir": "src/dist",
+        "outDir": "src/compiled",
         "sourceMap": true,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
@@ -10,21 +10,5 @@
         "noImplicitAny": false
     },
     "files": [
-        "node_modules/reflect-metadata/reflect-metadata.d.ts",
-        "src/typings/angular2/angular2.d.ts",
-        "src/app/startup/boot.ts",
-        "src/app/declaration-syntax/component.ts",
-        "src/app/declaration-syntax/component.spec.ts",
-        "src/app/declaration-syntax/service.ts",
-        "src/app/declaration-syntax/service.spec.ts",
-        "src/app/routing/page-one.component.ts",
-        "src/app/routing/page-one.component.spec.ts",
-        "src/app/routing/page-two.component.ts",
-        "src/app/routing/page-two.component.spec.ts"
-        "src/app/routing/app.component.ts",
-        "src/app/routing/app.component.spec.ts",
-        "src/app/routing/boot.ts",
-        "src/app/routing/routes.ts",
-        "src/app/routing/routes.spec.ts"
     ]
 }

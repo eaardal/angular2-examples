@@ -27,9 +27,12 @@ build/Release
 node_modules
 bower_components
 
-src/app/**/*.js
-src/app/**/*.js.map
+src/demos/**/*.js
+src/demos/**/*.js.map
 src/dist
-src/app/routing/dist
+src/demos/routing/dist
+dist
+compiled
 
+src/typings
 typings

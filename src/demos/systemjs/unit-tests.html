@@ -7,23 +7,32 @@
         <script src="../../../node_modules/jasmine-core/lib/jasmine-core/boot.js"></script>
     </head>
     <body>
-       <script src="../../../node_modules/systemjs/dist/system.src.js"></script>
+       <script src="../../../node_modules/systemjs/dist/system.src.js"></script>       
+       <script src="../../../node_modules/angular2/bundles/angular2.dev.js"></script>
         <script>
             System.config({
             packages: { 
-                'compiled': { defaultExtension: 'js' }
+                'compiled': { defaultExtension: 'js' } // Creates a package named "compile" of every .js file in the compiled folder
             }
             });
             Promise.all([
                 //System.import('compiled/foo'),                
                 //System.import('compiled/bar'),
-                System.import('compiled/foobar')
+                System.import('angular2/angular2'),
+                System.import('compiled/foobar') // foo and bar are loaded since foobar references/imports bar which references/imports foo
             ])
             .then(window.onload)            
             .then(function(){
-                console.log("System", System);
-                console.log("_loader", System._loader.modules);
-                console.log("defined", System.defined);
+                console.log('Loaded modules:');
+                for (var prop in System._loader.modules){
+                    var mod = System._loader.modules[prop];
+                    if (mod.name){
+                        console.log(mod.name);    
+                    }                    
+                }
+                //console.log("System", System);
+                //console.log("_loader", System._loader.modules); // Lists all loaded modules in SystemJS
+                //console.log("defined", System.defined); // Lists all defined modules in SystemJS
             })
             .then(function(){
 

@@ -13,7 +13,11 @@ See README.md files under each source folder for more info.
 ## Usage
 - Just browse the repository's code, or:
 - Install dependencies: `npm install`, `bower install`, `tsd install`
-- `grunt test`
+- Run each demo from their directory:
+	- E.x.: 
+		- Compile TypeScript `tsc -p src/demos/routing -w`
+		- Serve files `live-server --open=src/demos/routing`
+		- Run tests `live-server --open=src/demos/routing/unit-tests.html`
 
 ## Notes
 - Karma is currently not working. Run tests with `grunt test` which will start and run the Jasmine tests in `src/unit-tests.html`.

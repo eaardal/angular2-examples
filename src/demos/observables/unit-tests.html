@@ -15,8 +15,7 @@
     <script src="../../../node_modules/angular2/bundles/testing.js"></script>
     <script src="../../../node_modules/angular2/bundles/router.dev.js"></script>
     <script src="../../../node_modules/angular2/bundles/http.dev.js"></script>
-    <script src="../../../node_modules/reflect-metadata/Reflect.js"></script>
-    <script src="../../../node_modules/rxjs/Rx.js"></script>
+    <script src="../../../node_modules/reflect-metadata/Reflect.js"></script>    
     <script>
     System.config({
         transpiler: 'typescript',
@@ -24,12 +23,13 @@
             'dist': { defaultExtension: 'js' }
         },
         paths: {
-            'angular2/testing': '../../../node_modules/angular2/bundles/testing.js',
-            'rxjs': '../../../node_modules/rxjs/Rx.js'
+            'angular2/testing': '../../../node_modules/angular2/bundles/testing.js'
         }
     });
     Promise.all([
-            System.import('dist/observables.spec')
+            System.import('dist/angular-observables.spec'),
+            System.import('dist/rxjs-observables.spec'),
+            System.import('dist/http-context')
         ])
         .then(window.onload)
         .catch(console.error.bind(console));
@@ -37,3 +37,7 @@
 </body>
 
 </html>
+
+<!--
+<script src="../../../node_modules/rxjs/Rx.js"></script>
+-->

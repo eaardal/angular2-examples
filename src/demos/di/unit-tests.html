@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <title>Observable Tests</title>
+    <link rel="stylesheet" href="../../../node_modules/jasmine-core/lib/jasmine-core/jasmine.css">
+    <script src="../../../node_modules/jasmine-core/lib/jasmine-core/jasmine.js"></script>
+    <script src="../../../node_modules/jasmine-core/lib/jasmine-core/jasmine-html.js"></script>
+    <script src="../../../node_modules/jasmine-core/lib/jasmine-core/boot.js"></script>
+</head>
+
+<body>
+    <script type="application/javascript" src="../../../node_modules/systemjs/dist/system-polyfills.src.js"></script>
+    <script type="application/javascript" src="../../../node_modules/systemjs/dist/system.src.js"></script>
+    <script type="application/javascript" src="../../../node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script type="application/javascript" src="../../../node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script type="application/javascript" src="../../../node_modules/angular2/bundles/testing.dev.js"></script>
+    <script type="application/javascript" src="../../../node_modules/angular2/bundles/router.dev.js"></script>
+    <script type="application/javascript" src="../../../node_modules/angular2/bundles/http.dev.js"></script>
+    <script type="application/javascript" src="../../../node_modules/rxjs/bundles/Rx.js"></script>        
+    <script>
+    System.config({
+        transpiler: 'typescript',
+        packages: { 
+            'compiled': { defaultExtension: 'js' },            
+        }  
+    });
+    Promise.all([            
+            System.import('compiled/di.spec'),
+
+        ])        
+        .then(window.onload)
+        .then(function(){
+            console.log(System._loader.modules);
+            console.log(System);
+        })
+        .catch(console.error.bind(console));
+    </script>
+</body>
+
+</html>
